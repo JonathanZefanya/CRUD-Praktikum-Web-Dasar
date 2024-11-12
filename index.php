@@ -29,7 +29,7 @@ include "database/koneksi.php";
                 <th>Nim</th>
                 <th>Nama Lengkap</th>
                 <th>Alamat</th>
-                <th>Jenis Kelamim</th>
+                <th>Jenis Kelamin</th>
                 <th>Prodi</th>
                 <th>Foto</th>
                 <th>Aksi</th>
