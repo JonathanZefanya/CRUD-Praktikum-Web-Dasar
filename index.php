@@ -18,6 +18,13 @@ include "database/koneksi.php";
             Data Mahasiswa
         </div>
         <div class="card-body">
+            <!-- Opsional -->
+            <form method="GET" action="database/search.php" class="mb-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="search" placeholder="Cari NIM atau Nama Mahasiswa" value="<?= isset($_GET['search']) ? $_GET['search'] : '' ?>">
+                    <button class="btn btn-primary" type="submit">Cari</button>
+                </div>
+            </form>
         <!-- Button trigger -->
         <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#modalTambah">
         Tambah Data</button>
@@ -177,7 +184,7 @@ include "database/koneksi.php";
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form method="POST" action="database/aksi.php">
+            <form method="POST" action="database/aksi.php" enctype="multipart/form-data">
             <div class="modal-body">
                 <div class="mb-3">
                     <label class="form-label">NIM</label>
