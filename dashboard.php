@@ -1,6 +1,13 @@
 <?php
 //panggil database
 include "database/koneksi.php";
+
+session_start();
+
+if(!isset($_SESSION['user_id'])){
+    header("location : login.php");
+    exit;
+}
 ?>
 
 <!doctype html>
@@ -15,7 +22,7 @@ include "database/koneksi.php";
     <div class="container">
             <div class="card mt-5">
         <div class="card-header bg-primary text-white">
-            Data Mahasiswa
+            Data Mahasiswa  
         </div>
         <div class="card-body">
             <!-- Opsional -->
@@ -230,6 +237,7 @@ include "database/koneksi.php";
                 </div>
                 <!-- <button type="button" class="btn btn-success mb-3" >Cetak Data Mahasiswa</button> -->
                 <a href="cetak.php" class="btn btn-success mb-3">Cetak Data Mahasiswa </a>
+                <a href="logout.php" class="btn-logout">LogOut</a>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@ include "database/koneksi.php";
             <!-- Button trigger -->
             <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#modalTambah">
             Tambah Data</button>
-            <a href="index.php" class="btn btn-primary mb-3">Data Mahasiswa</a>
+            <a href="dashboard.php" class="btn btn-primary mb-3">Data Mahasiswa</a>
         </div>
 
         <table class="table table-bordered table-striped table-hover">
@@ -69,7 +69,7 @@ include "database/koneksi.php";
         </table>
 
         
-                
+        <a href="dashboard.php" class="btn-logout">LogOut</a>        
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script>
 		window.print();

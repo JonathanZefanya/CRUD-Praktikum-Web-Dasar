@@ -22,7 +22,7 @@
 
     <!-- Tombol Tambah Data -->
     <div class="d-flex justify-content-between mb-3">
-        <button type="button" class="btn btn-primary" onclick="window.location.href='../index.php'">Kembali</button>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='../dashboard.php'">Kembali</button>
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalTambah">Tambah Data</button>
     </div>
     

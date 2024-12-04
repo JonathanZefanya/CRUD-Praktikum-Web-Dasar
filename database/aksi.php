@@ -35,12 +35,12 @@ if (isset($_POST['saving'])) {
                                                    '$_POST[tprodi]',
                                                    '$foto')");
         if ($simpan) {
-            echo "<script>alert('Simpan data sukses'); document.location='../index.php';</script>";
+            echo "<script>alert('Simpan data sukses'); document.location='../dashboard.php';</script>";
         } else {
-            echo "<script>alert('Simpan data gagal: " . mysqli_error($koneksi) . "'); document.location='../index.php';</script>";
+            echo "<script>alert('Simpan data gagal: " . mysqli_error($koneksi) . "'); document.location='../dashboard.php';</script>";
         }
     } else {
-        echo "<script>alert('Gagal mengunggah foto'); document.location='../index.php';</script>";
+        echo "<script>alert('Gagal mengunggah foto'); document.location='../dashboard.php';</script>";
     }
 }
 
@@ -56,9 +56,9 @@ if (isset($_POST['changing'])) {
                                 foto = '$foto'
                                 WHERE id_mhs = '$_POST[id_mhs]'");
     if ($ubah) {
-        echo "<script>alert('Ubah data sukses'); document.location='../index.php';</script>";
+        echo "<script>alert('Ubah data sukses'); document.location='../dashboard.php';</script>";
     } else {
-        echo "<script>alert('Ubah data gagal: " . mysqli_error($koneksi) . "'); document.location='../index.php';</script>";
+        echo "<script>alert('Ubah data gagal: " . mysqli_error($koneksi) . "'); document.location='../dashboard.php';</script>";
     }
 }
 
@@ -79,9 +79,9 @@ if (isset($_POST['deleting'])) {
             unlink($file_path); // Menghapus file
         }
 
-        echo "<script>alert('Hapus data sukses'); document.location='../index.php';</script>";
+        echo "<script>alert('Hapus data sukses'); document.location='../dashboard.php';</script>";
     } else {
-        echo "<script>alert('Hapus data gagal: " . mysqli_error($koneksi) . "'); document.location='../index.php';</script>";
+        echo "<script>alert('Hapus data gagal: " . mysqli_error($koneksi) . "'); document.location='../dashboard.php';</script>";
     }
 }
 ?>
